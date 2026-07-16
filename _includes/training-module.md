@@ -8,8 +8,25 @@ and we're using the module title to create part of the HTML link (slug).
 {% assign motivation = page.motivation %}
 {% assign customization = page.customization %}
 {% assign modules = page.modules %}
+{% assign topic-image = page.topic-image %}
+{% assign topic-image-alt = page.topic-image-alt %}
 
+
+{% if topic-image and topic-image-alt %}
+<div class="media" style="margin-bottom: 10px;">
+    <div><p>{{ motivation}}</p></div>
+    <div class="media-right">
+        <figure class="image is-64x64">
+          <img
+            src="{{ topic-image }}"
+            alt="{{ topic-image-alt }}"
+          />
+        </figure>
+    </div>
+</div>
+{% else %}
 {{ motivation }}
+{% endif %}
 
 {% if customization %}{{ customization }}{% else %}Open Life Science can [customize our Open Data training modules to fit your needs](/training/training-services).{% endif %}
 

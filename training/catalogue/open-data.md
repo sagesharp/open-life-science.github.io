@@ -5,6 +5,8 @@ description: Open Data training modules offered by Open Life Science.
 topic: Open Data
 motivation: Open data practices make data findable, accessible, interoperable, and reusable.
 customization: Whether your organization supports scientists in the field gathering data, or manages a large amount of data for research engineers, Open Life Science can [customize our Open Data training modules to fit your needs](/training/training-services).
+topic-image: https://openclipart.org/download/336173/analyze.svg
+topic-image-alt: A magnifying glass over a chart with data points. Art licensed CC0 1.0 Universal from openclipart.org artist mukta-soni
 modules:
     -
         title: Introduction to Open Data
