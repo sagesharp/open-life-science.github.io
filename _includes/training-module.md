@@ -4,6 +4,10 @@ otherwise the links to each module section for the two duplicate titles won't wo
 That's because each anchor id needs to be unique,
 and we're using the module title to create part of the HTML link (slug).
 -->
+<!--
+The module description should be one paragraph only.
+Otherwise the list of training modules in the training catalog page may look weird.
+-->
 {% assign topic = page.topic %}
 {% assign motivation = page.motivation %}
 {% assign customization = page.customization %}
