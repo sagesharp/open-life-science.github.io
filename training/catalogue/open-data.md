@@ -20,6 +20,19 @@ modules:
         prework: |
             1. [Download this data file](https://www.example.com)
             2. [Install this data processing software](https://www.example.com)
+    -
+        title: FAIR Data - Insights and Perspectives
+        description: Description of course. Multiple sentences in one longer paragraph.
+        learning-goals: |
+            During this lesson, you will learn:
+
+             - This thing.
+             - Another thing.
+             - Yet another thing.
+        prework: |
+            1. [Download this data file](https://www.example.com)
+            2. [Install this data processing software](https://www.example.com)
+
 
 ---
 
