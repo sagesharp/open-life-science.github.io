@@ -7,11 +7,10 @@ description: Catalogue of training modules offered by Open Life Science.
 {% assign topics = site.pages | where: 'dir', '/training/catalogue/' %}
 {% assign number-modules = 0 %}
 {% for topic-page in topics %}
-<!-- Need to find a way to skip the cohort project presentation pages, if those get included.
-Might need to skip counting modules if the page.name starts with a specific string.
--->
     {% for module in topic-page.modules %}
-        {% assign number-modules = number-modules | plus:1 %}
+        {% if module.count-this-module %}
+            {% assign number-modules = number-modules | plus:1 %}
+        {% endif %}
     {% endfor %}
 {% endfor %}
 

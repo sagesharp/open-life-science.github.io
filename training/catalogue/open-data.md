@@ -11,6 +11,7 @@ modules:
     -
         title: Introduction to Open Data
         description: Description of course. Multiple sentences in one longer paragraph.
+        count-this-module: true
         learning-goals: |
             During this lesson, you will learn:
 
@@ -23,6 +24,7 @@ modules:
     -
         title: FAIR Data - Insights and Perspectives
         description: Description of course. Multiple sentences in one longer paragraph.
+        count-this-module: true
         learning-goals: |
             During this lesson, you will learn:
 
