@@ -18,6 +18,10 @@ Might need to skip counting modules if the page.name starts with a specific stri
 Open Life Science (OLS) has {{ number-modules }} training modules
 that can be customized to fit your needs.
 
+<div style="margin-top: 30px; margin-bottom: 30px;"><a class="training-navigation" href="/training/training-services">
+    Training Services
+</a></div>
+
 <h2>Training Topics</h2>
 {% for topic-page in topics %}
 <a href="#topic-{{ topic-page.topic | slugify }}">{{ topic-page.topic }}</a>
@@ -46,4 +50,7 @@ Modules:
 {% for module in topic-page.modules %}
  - <a href="{{ topic-page.url }}#{{ module.title | slugify }}">{{ module.title }}</a> - {{ module.description }}
 {% endfor %}
+<div  style="margin-top: 30px; margin-bottom: 30px;"><a class="catalogue-navigation" href="{{ topic-page.url }}">
+    View Content →
+</a></div>
 {% endfor %}

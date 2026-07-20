@@ -34,9 +34,9 @@ Otherwise the list of training modules in the training catalog page may look wei
 
 {% if customization %}{{ customization }}{% else %}Open Life Science can [customize our Open Data training modules to fit your needs](/training/training-services).{% endif %}
 
-<div class="button training-button is-primary is-link is-medium" href="/training/training-services">
+<div style="margin-top: 30px; margin-bottom: 30px;"><a class="training-navigation" href="/training/training-services">
     Training Services
-</div>
+</a></div>
 
 <h2 id="topics"><a class="anchor" href="#topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>{{ topic }} Topics</h2>
 
@@ -44,11 +44,12 @@ Otherwise the list of training modules in the training catalog page may look wei
 <p><a href="#module-{{ module.title | slugify }}">{{ module.title }}</a></p>
 {% endfor %}
 
-<div class="button catalogue-button is-secondary is-link is-medium" href="/training/training-catalogue">
-    Back to Catalogue
-</div>
+<div  style="margin-top: 30px; margin-bottom: 30px;"><p><a class="catalogue-navigation" href="/training/training-catalogue">
+    ❮ Back to Catalogue
+</a></p></div>
 
 {% for module in modules %}
+<hr>
 <h2 id="module-{{ module.title | slugify }}"><a class="anchor" href="#module-{{ module.title | slugify }}" aria-hidden="true"><span class="octicon octicon-link"></span></a>{{ module.title }}</h2>
 
 {{ module.description }}
@@ -61,5 +62,9 @@ Otherwise the list of training modules in the training catalog page may look wei
 
 {{ module.prework }}
 {% endif %}
+
+<div  style="margin-top: 30px; margin-bottom: 30px;"><a class="catalogue-navigation" href="#topics">
+    ↑ Other Topics
+</a></div>
 
 {% endfor %}
