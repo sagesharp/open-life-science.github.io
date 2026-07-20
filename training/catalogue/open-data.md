@@ -25,6 +25,14 @@ modules:
         title: FAIR Data - Insights and Perspectives
         description: Description of course. Multiple sentences in one longer paragraph.
         count-this-module: true
+        video:
+            speakers:
+            - proccaserra
+            recording: https://youtu.be/ylqDx_ELfus?t=268
+            date: 2020-11-05
+            slides: https://docs.google.com/presentation/d/1ER_ZQ_Fe_PFWBPrP87dU6jRaPT2dlB4hCu-wGXJwnBA/edit?usp=sharing
+            cohort-name: Open Seeds cohort 2
+            cohort-link: https://we-are-ols.org/openseeds/ols-2/
         learning-goals: |
             During this lesson, you will learn:
 

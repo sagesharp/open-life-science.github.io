@@ -63,6 +63,46 @@ Otherwise the list of training modules in the training catalog page may look wei
 {{ module.prework }}
 {% endif %}
 
+{% if module.video %}
+{% assign video = module.video %}
+<div>
+    <iframe
+        style="width:100%;height:100%;min-height:300px;"
+        src="{{ video.recording | replace: 'youtu.be/', 'youtube.com/embed/' | replace: '?t', '?start' }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+<div style="margin-top:1em;" class="video-metadata">
+    <table>
+        <tr>
+            <td><strong>Recorded</strong></td>
+            <td>{{ video.date }}</td>
+        </tr>
+        {% if video.slides %}
+        <tr>
+            <td><strong>Material</strong></td>
+            <td><a href="{{ video.slides }}"><i class="fab fa-slideshare"></i> Slides</a></td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td><strong>Cohort</strong></td>
+            <td><a href="{{video.cohort-link}}">{{ video.cohort-name }}</a></td>
+        </tr>
+    </table>
+</div>
+{% assign speakers = '' %}
+{% for s in video.speakers %}
+    {% assign speaker = site.data.people[s] %}
+    {% capture speakers %} {{ speakers }} {%- unless forloop.last -%},{%- endunless -%}{{ speaker.first-name }} {{ speaker.last-name }}{% endcapture %}
+{% endfor %}
+{% for username in video.speakers %}
+{% assign user = speaker %}
+{% include _includes/people.html user=speaker username=video.speaker %}
+{% endfor %}
+{% endif %}
 <div  style="margin-top: 30px; margin-bottom: 30px;"><a class="catalogue-navigation" href="#topics">
     ↑ Other Topics
 </a></div>
