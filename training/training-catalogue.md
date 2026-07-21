@@ -47,7 +47,7 @@ that can be customized to fit your needs.
 
 Modules:
 {% for module in topic-page.modules %}
- - <a href="{{ topic-page.url }}#{{ module.title | slugify }}">{{ module.title }}</a> - {{ module.description }}
+ - <a href="{{ topic-page.url }}#module-{{ module.title | slugify }}">{{ module.title }}</a> - {{ module.description }}
 {% endfor %}
 <div  style="margin-top: 30px; margin-bottom: 30px;"><a class="catalogue-navigation" href="{{ topic-page.url }}">
     View Content →

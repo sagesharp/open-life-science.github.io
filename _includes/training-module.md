@@ -32,7 +32,7 @@ Otherwise the list of training modules in the training catalog page may look wei
 {{ motivation }}
 {% endif %}
 
-{% if customization %}{{ customization }}{% else %}Open Life Science can [customize our Open Data training modules to fit your needs](/training/training-services).{% endif %}
+{% if customization %}{{ customization }}{% else %}Open Life Science can [customize our {{ topic }} training modules to fit your needs](/training/training-services).{% endif %}
 
 <div style="margin-top: 30px; margin-bottom: 30px;"><a class="training-navigation" href="/training/training-services">
     Training Services
