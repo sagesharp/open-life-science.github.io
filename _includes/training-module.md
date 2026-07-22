@@ -94,8 +94,8 @@ Otherwise the list of training modules in the training catalog page may look wei
         </tr>
         {% endif %}
         <tr>
-            <td><strong>Cohort</strong></td>
-            <td><a href="{{video.cohort-link}}">{{ video.cohort-name }}</a></td>
+            <td><strong>Program</strong></td>
+            <td><a href="{{video.program-link}}">{{ video.program-name }}</a></td>
         </tr>
         {% if video.citation %}
         <tr>

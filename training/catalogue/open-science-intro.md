@@ -15,8 +15,8 @@ modules:
             - yochannah
             recording: https://youtu.be/ViqeEI3J9dY?t=262
             date: '2023-04-04'
-            cohort-name: Open Seeds cohort 7
-            cohort-link: https://we-are-ols.org/openseeds/ols-7/
+            program-name: Open Seeds cohort 7
+            program-link: https://we-are-ols.org/openseeds/ols-7/
         learning-goals: |
             During this lesson, you will:
 

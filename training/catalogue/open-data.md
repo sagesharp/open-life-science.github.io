@@ -31,8 +31,8 @@ modules:
             recording: https://youtu.be/ylqDx_ELfus?t=268
             date: 2020-11-05
             slides: https://docs.google.com/presentation/d/1ER_ZQ_Fe_PFWBPrP87dU6jRaPT2dlB4hCu-wGXJwnBA/edit?usp=sharing
-            cohort-name: Open Seeds cohort 2
-            cohort-link: https://we-are-ols.org/openseeds/ols-2/
+            program-name: Open Seeds cohort 2
+            program-link: https://we-are-ols.org/openseeds/ols-2/
             resources: |
                 [Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)
 
