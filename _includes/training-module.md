@@ -41,7 +41,7 @@ Otherwise the list of training modules in the training catalog page may look wei
 <h2 id="topics"><a class="anchor" href="#topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>{{ topic }} Topics</h2>
 
 {% for module in modules %}
-<p><a href="#module-{{ module.title | slugify }}">{{ module.title }}</a></p>
+<p><a href="#module-{{ module.title | slugify }}">{{ module.title }}</a> - {{ module.description }}</p>
 {% endfor %}
 
 <div  style="margin-top: 30px; margin-bottom: 30px;"><p><a class="catalogue-navigation" href="/training/training-catalogue">
