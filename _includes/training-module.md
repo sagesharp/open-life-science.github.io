@@ -114,14 +114,9 @@ Otherwise the list of training modules in the training catalog page may look wei
 
 {% endif %}
 <h3>Speakers</h3>
-{% assign speakers = '' %}
-{% for s in video.speakers %}
-    {% assign speaker = site.data.people[s] %}
-    {% capture speakers %} {{ speakers }} {%- unless forloop.last -%},{%- endunless -%}{{ speaker.first-name }} {{ speaker.last-name }}{% endcapture %}
-{% endfor %}
 {% for username in video.speakers %}
-{% assign user = speaker %}
-{% include _includes/people.html user=speaker username=video.speaker %}
+{% assign user = site.data.people[username] %}
+{% include _includes/people.html user=user username=username %}
 {% endfor %}
 {% endif %}
 <div  style="margin-top: 30px; margin-bottom: 30px;"><a class="catalogue-navigation" href="#topics">
