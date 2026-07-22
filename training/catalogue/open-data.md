@@ -33,6 +33,10 @@ modules:
             slides: https://docs.google.com/presentation/d/1ER_ZQ_Fe_PFWBPrP87dU6jRaPT2dlB4hCu-wGXJwnBA/edit?usp=sharing
             cohort-name: Open Seeds cohort 2
             cohort-link: https://we-are-ols.org/openseeds/ols-2/
+            resources: |
+                [Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)
+
+                [2016 article on FAIR data practices](https://www.nature.com/articles/sdata201618) - Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). [https://doi.org/10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)
         learning-goals: |
             During this lesson, you will learn:
 

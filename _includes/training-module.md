@@ -105,6 +105,12 @@ Otherwise the list of training modules in the training catalog page may look wei
         {% endif %}
     </table>
 </div>
+{% if video.resources %}
+<h3>Additional Resources</h3>
+
+{{ video.resources }}
+
+{% endif %}
 {% assign speakers = '' %}
 {% for s in video.speakers %}
     {% assign speaker = site.data.people[s] %}
