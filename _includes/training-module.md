@@ -99,10 +99,10 @@ Otherwise the list of training modules in the training catalog page may look wei
             <td><a href="{{video.program-link}}">{{ video.program-name }}</a></td>
         </tr>
         {% endif %}
-        {% if video.citation %}
+        {% if video.citation-text and video.citation-link %}
         <tr>
-            <td><strong>Citation information</strong></td>
-            <td><a href="{{ video.citation }}">Citation information</a></td>
+            <td><strong>Citation</strong></td>
+            <td>{{ video.citation-text }}<a href="{{ video.citation-link }}">{{ video.citation-link }}</a></td>
         </tr>
         {% endif %}
     </table>
