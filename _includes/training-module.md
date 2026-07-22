@@ -81,6 +81,12 @@ Otherwise the list of training modules in the training catalog page may look wei
             <td><strong>Recorded</strong></td>
             <td>{{ video.date }}</td>
         </tr>
+        {% if video.transcript %}
+        <tr>
+            <td><strong>Transcript</strong></td>
+            <td><a href="{{ video.transcript }}">Transcript</a></td>
+        </tr>
+        {% endif %}
         {% if video.slides %}
         <tr>
             <td><strong>Material</strong></td>
@@ -91,6 +97,12 @@ Otherwise the list of training modules in the training catalog page may look wei
             <td><strong>Cohort</strong></td>
             <td><a href="{{video.cohort-link}}">{{ video.cohort-name }}</a></td>
         </tr>
+        {% if video.citation %}
+        <tr>
+            <td><strong>Citation information</strong></td>
+            <td><a href="{{ video.citation }}">Citation information</a></td>
+        </tr>
+        {% endif %}
     </table>
 </div>
 {% assign speakers = '' %}
