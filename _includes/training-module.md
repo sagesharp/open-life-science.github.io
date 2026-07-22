@@ -111,6 +111,7 @@ Otherwise the list of training modules in the training catalog page may look wei
 {{ video.resources }}
 
 {% endif %}
+<h3>Speakers</h3>
 {% assign speakers = '' %}
 {% for s in video.speakers %}
     {% assign speaker = site.data.people[s] %}
