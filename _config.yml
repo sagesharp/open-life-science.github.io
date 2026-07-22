@@ -20,6 +20,7 @@ newsletter: https://openlifescience.civicrm.org/civicrm/newsletter
 youtube: https://www.youtube.com/channel/UCs12-ZgnDJOWIWN3Vo1XHXA/
 
 includes_dir: .
+exclude: [training/catalogue/template.md]
 markdown: kramdown
 
 collections:
