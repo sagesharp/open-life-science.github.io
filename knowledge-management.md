@@ -657,6 +657,132 @@ To customize templates:
 3. Test by running the `create_call_templates.sh` script
 4. Submit changes by creating a Pull Request
 
+# Training Catalogue
+
+## Background
+
+Vocabulary:
+ - training topic - A broad topic, such as 'Open Data'
+ - training module - A specific lesson that is organized under the broad topic, such as 'FAIR data practices'
+
+The goal of the training catalogue is to keep a portfolio of training modules in a format that potential partners find easy to browse and understandable. This means the catalogue will (usually) have one video per training module. Some training modules may have multiple videos to showcase how OLS can customize a training module for different audiences. Past training cohorts can still find the full video playlist for their cohort on [OLS' YouTube channel](https://www.youtube.com/@OpenLifeSci/playlists).
+
+## Website files and folders
+
+There are several files and folders associated with the training catalogue:
+ - `training/training-services.md` - displays a training services pitch for potential partners, with quotes from past grant partners and highlights of OLS' impact on the open science community
+ - `training/training-catalogue.md` - summary of training topics, along with lists of training modules and their descriptions - the goal is to help partners find specific training modules they are looking for, and entice them to explore additional training modules
+ - `training/catalogue/` - this directory stores all the training topic files, which contain data about the training modules
+ - `training/catalogue/00-template.md` - template for creating new training topics, or showing how new training modules can be formatted in existing topic files
+ - `_includes/training-module.md` - controls how all training module details are displayed
+ - `_config.yaml` - the 'excludes' section lists the training catalogue template file, in order to make sure Jekyll ignores that file when generating the training catalogue.
+ - `_data/openseeds/library.yaml` - historical archive of past Open Seeds cohort videos, including data about speakers
+
+## Creating a new training topic
+
+First, decide where the new training topic should be listed in the [current training topics order](training/training-catalogue). For example, should it be after 'Open Science Introduction' and before 'Open Data'? Or you can decide to just list it at the end of the topics list.
+
+The topic order is set by the numbered prefix of the files in `training/catalogue/`. For example, you might have the following topic files:
+
+```
+00-template.md
+01-open-science-introduction.md
+02-open-data.md
+```
+
+If you want to create a new topic that will be shown at the end of the training topic list, the file name should be `03-name.md`.
+
+To create a new topic, copy the `00-template.md` file to `XX-NAME.md` where `XX` is the topic order number, and NAME is the name of the topic.
+
+Edit your new topic file. The copied template will contain a set of fields (front matter variables) that describe the topic. The template file contains descriptions of the fields, and some example field text. Each field that is optional will have a description that starts with '(optional)'. Some fields are documented as optional but required if another optional field is used. If a field isn't marked '(optional)' it is required. Please see the template file for up-to-date field documentation.
+
+## Adding a new training module
+
+Every training topic should have at least one training module. Training module information is stored in the training topic files under the directory `training/catalogue/`.
+
+The file `00-template.md` has instructions on how to fill out information about the training module. The template file contains descriptions of the fields, and some example field text. Each field that is optional will have a description that starts with '(optional)'. Some fields are documented as optional but required if another optional field is used. If a field isn't marked '(optional)' it is required. Please see the template file for up-to-date field documentation.
+
+You may need to copy some information from past OLS cohort videos. This includes information like the speaker username, recording date, cohort information, etc. You can find an archive of that data in `_data/openseeds/library.yaml`.
+
+The [Open Seeds cohort pages](openseeds/#cohorts) may also contain information such as prework, lesson goals, links to slides and resources, etc.
+
+## Reordering training topics
+
+Note: This tutorial assumes all the topic files under `training/catalogue/` are already committed to your local git repository. If they aren't, make sure you `git commit` the files before trying to move them with `git mv`.
+
+The training topic order on the catalogue page is set by the number prefix of the topic filename in `training/catalogue/`.
+
+For example, you might have the following topic files under `training/catalogue/`:
+
+```
+00-template.md
+01-red.md
+02-orange.md
+03-yellow.md
+04-blue.md
+05-purple.md
+06-green.md
+```
+
+Say we want to move the topic 'green' so that it is listed between 'yellow' and 'blue'. That means the topic green should be the new fourth topic, blue the fifth topic, and purple the sixth topic.
+
+### Reordering with GitHub Codespaces
+
+Open the file explorer side pane in GitHub Codespaces.
+
+Expand the `training` folder and its subfolder `catalogue`.
+
+Right click on the `06-green.md` file. You'll see a 'paste' menu. Right click on the file again. A bigger menu will pop up. Choose `Rename...` This will allow you to edit the file name in the explorer pane. Rename the file to `04-green.md`
+
+Use a similar method to rename `04-blue.md` to `05-blue.md`, and rename `05-purple.md` to `06-purple.md`.
+
+In the terminal pane, run the following commands to commit all your changes to file names in the `training/catalogue/` directory:
+
+```
+git add training/catalogue/
+git commit
+```
+
+### Reordering with git commands
+
+First, we use git to move the `06-green.md` file to be named `04-green.md`:
+
+```
+git mv training/catalogue/06-green.md training/catalogue/04-green.md
+```
+
+Next, we move the `04-blue.md` to file be named `05-blue.md`:
+
+```
+git mv training/catalogue/04-blue.md training/catalogue/05-blue.md
+```
+
+Finally, we move the `05-purple.md` file to be named `06-purple.md`:
+
+```
+git mv training/catalogue/05-purple.md training/catalogue/06-purple.md
+```
+
+Now the `training/catalogue/` directory should contain the following files:
+
+```
+00-template.md
+01-red.md
+02-orange.md
+03-yellow.md
+04-green.md
+05-blue.md
+06-purple.md
+```
+
+Finally, commit the file name changes with the following command:
+
+```
+git commit
+```
+
+Note: If you accidentially rename the files using the GitHub Codespaces file explorer, you may have to use the command `git add` to add the renamed file, and then `git rm old-filename.md` to remove the old file from the git history.
+
 # Data and stats
 
 Data about the community (e.g. members' location), the cohort (e.g. feedback or roles), and the video library are explored and visualized via Jupyter Notebooks, stored in a [GitHub repository]({{ site.github.owner_url }}/ols-stats/) and rendered in a dedicated [OLS stat website]({{ site.url }}/ols-stats/).
